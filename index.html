@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style .css">
+        <title>Responsive landing page</title>
+        
+        <style>
+        @keyframes appear {
+        from {
+        opacity: 0;
+        transform: translateX(-100px);
+       } 
+       to {
+       opacity: 1;
+       transform: translateX(0px);
+       }
+
+       .features-grid {
+       animation: appear linear;
+       animation-timeline: view();
+       animation-range: entry 0 cover;
+      } 
+   }
+        </style>
+    </head>  
+    <body> 
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">BluPay</div>
+                <button class="mobile-menu-btn">☰</button>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+    
+        <section class="hero">
+            <div class="hero-content">
+                <span class="heading-primary-main"><h1>Your Financial Future</h1></span>
+                <span class="heading-primary-sub"><p>Secure, simple, and Rewarding Banking</p></span>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+        </section>
+    
+        <section class="features" id="features">
+            <h2 style="text-align: center;">Our Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Mobile Banking</h3>
+                    <p>Mobile Deposit: Deposit checks remotely</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Grow Your Money</h3>
+                    <p>High-Yield Savings:Earn Competitive Interest rates</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Simple Budgeting</h3>
+                    <p>Track Expenses and set financial goals</p>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+    
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
+    </body>
+    </html>
